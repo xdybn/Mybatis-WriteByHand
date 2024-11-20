@@ -1,12 +1,6 @@
 package com.coriander.mybatis.test.po;
 
 import java.util.Date;
-/**
- * @Author YaoBoning
- * @Date 2024/11/20 18:00
- * @Description
- */
-
 
 public class User {
 
