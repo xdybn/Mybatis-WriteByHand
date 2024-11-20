@@ -5,6 +5,7 @@ import com.coriander.mybatis.session.SqlSession;
 import com.coriander.mybatis.session.SqlSessionFactory;
 import com.coriander.mybatis.session.SqlSessionFactoryBuilder;
 import com.coriander.mybatis.test.dao.IUserDao;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,9 +20,9 @@ import java.io.Reader;
  * @github https://github.com/fuzhengwei
  * @Copyright 公众号：bugstack虫洞栈 | 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
  */
+@Slf4j
 public class ApiTest {
 
-    private Logger logger = LoggerFactory.getLogger(ApiTest.class);
 
     @Test
     public void test_SqlSessionFactory() throws IOException {
@@ -35,7 +36,7 @@ public class ApiTest {
 
         // 3. 测试验证
         String res = userDao.queryUserInfoById("10001");
-        logger.info("测试结果：{}", res);
+        log.info("测试结果：{}", res);
     }
 
 }
